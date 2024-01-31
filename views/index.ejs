@@ -1,0 +1,60 @@
+<%- include("partials/header.ejs") %>
+<body class="main-content">
+    <section class="hero-color pb-5">
+        <div class="container text-center py-5">
+             <div class="row justify-content-center px-4 pt-5 ">
+            <h1 class="display-4 fw-bold hero-text-white hero-text">The Gaming Room</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4 hero-text-white hero-text">All gaming blog posts</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+              </div>
+            </div>
+             </div>
+        </div>
+    </section>
+    <!--Sezione che mostra cards degli articoli creati, con foto e testo-->
+    <div class="container text-center">
+      <div class="row justify-content-center pt-3">
+            <% if(locals.post && locals.title && post.length > 0){%>
+              <% for(let i=0; i<post.length; i++) { %>
+                <div id="post<%= i %>" class="col-lg-3 col-8 card g-3 mx-5" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title" style="font-weight:bold;"><%= title[i]  %></h5>
+                      <p class="card-text"><%= truncateText(post[i], 15) %></p>
+                      <div class="row justify-content-center">
+                        <div class="row" col-md-4 col-lg-4 g-2 mx-1">
+                          <a href="/article/<%= i %>" class="btn btn-primary g-2">Vedi Post</a>
+                        </div>
+                        <div class="row">
+                          <a href="/edit/<%= i %>" class="btn btn-primary g-2">Modifica Post</a>
+                        </div> 
+                        <div class="row">
+                          <a href="/delete/<%= i %>#post<%= i %>" class="btn btn-primary g-2 mt-2">Elimina Post</a>
+                        </div>   
+                      </div>  
+                </div>
+                 </div>   
+                <% } %>
+                <% }else{ %>
+                  <div>
+                    <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Nessun articolo presente</p>
+                </div>      
+                  </div>
+                  </div>       
+                  <% } %>      
+            <% function truncateText(text, numWords) {
+              const words = text.split(' ').slice(0, numWords);
+              return words.join(' ');
+            }
+           %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include("partials/footer.ejs") %>
+</body>
+
+

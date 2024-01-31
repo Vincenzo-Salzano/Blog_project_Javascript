@@ -1,0 +1,44 @@
+<%- include("partials/header.ejs")  %>
+<section class="edit-section">
+    <div class="container text-center">
+        <div class="row justify-content-center px-4">
+            <div class="col-lg-6">  <!--DA QUI-->
+                <h1 class="py-4">Modifica Articolo</h1>
+                <form action="/put/<%= id %>" method="POST">
+                    <div class="row justify-content-center pb-4">
+                        <input type="hidden" name="postId" value="<%= id %>">
+                        <div class="col-10">
+                            <label class="py-3">Titolo Articolo</label>
+                            <input name="blogTitle" value="<%= title %>" class="form-text">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center pb-4">
+                        <div class="col-10">
+                            <label class="py-3">Testo Articolo</label>
+                            <textarea name="blogPost" class="form-area"><%= post || "" %></textarea>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <input class="btn btn-primary" type="submit" value="Salva"/>
+                        </div>
+                    </div>
+                </form>
+            </div> <!--A QUI-->
+             <!-- <form action="/put/<%= id %>" method="POST">
+                <div class="col-10">
+                    <input type="hidden" name="postId" value="<%= id %>">
+                    <input name="blogTitle" value="<%= title || "" %>"><br>
+                    <textarea name="blogPost"><%= post || ""  %></textarea>
+                </div>
+                <div class="justify-content-center">
+                    <input class="btn btn-primary" type="submit"></input>
+                </div>
+              </form>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%- include("partials/footer.ejs")  %>

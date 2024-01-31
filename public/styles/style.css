@@ -1,0 +1,93 @@
+/*
+Colors
+Blu vivace: #3498db (link, pulsanti, elementi di rilievo)
+Verde brillante: #2ecc71 (call to action ed elementi positivi)
+Grigio chiaro: #f8f9fa (sfondo)
+Rosso acceso: #e74c3c (elementi importanti e messaggi di avviso)
+Nero: #333333 (colore del testo)
+Sfumatura da blu a nero: Da #2980b9 a #2c3e50
+*/
+/*
+Font CSS Rules
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+
+body{
+    background-color:#f8f9fa ;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer{
+        position: absolute; 
+        bottom: 0; 
+        width: 100%;
+        left: 0; 
+        z-index: 10;
+}
+
+.main-content{
+    height: 100%;
+}
+
+h1{
+    font-weight: bold;
+}
+
+.create-section{
+    font-family:'Open Sans', sans-serif;
+    color: #333333;
+}
+
+.edit-section{
+    font-family:'Open Sans', sans-serif;
+    color: #333333;
+}
+
+.view-section{
+    font-family:'Open Sans', sans-serif;
+    color: #333333;
+}
+/*Button colors*/
+.btn-primary{
+    background-color: #3498db;
+}
+
+.bg-body-tertiary{
+    background-color: #2ecc71 !important;
+}
+
+footer{
+    background-color: #3498db;
+}
+
+/*Footer link color*/
+.nav-link{
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.nav-color{
+    background-color: #2ecc71;
+    font-family:'Open Sans', sans-serif;
+}
+
+.hero-color{
+    background: linear-gradient(to bottom, #2980b9, #2c3e50);
+    font-family: 'Montserrat', sans-serif;
+    color: #2ecc71;
+}
+
+.form-text{
+    width: 100%;
+    font-family:'Open Sans', sans-serif; 
+}
+
+.form-area{
+    width:100%;
+    height: 500px;
+    font-family:'Open Sans', sans-serif;
+}

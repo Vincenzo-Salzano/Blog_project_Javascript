@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs")%>
+<section class="create-section">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h1 class="py-4">Crea Articolo</h1>
+                <form action="/submit" method="POST">
+                    <div class="row justify-content-center pb-4">
+                        <div class="col-10">
+                            <label class="py-3">Titolo Articolo</label>
+                            <input type="text" name="blogTitle" class="form-text"/>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center pb-4">
+                        <div class="col-10">
+                            <label class="py-3">Testo Articolo</label>
+                            <textarea type="text" name="blogPost" class="form-area"></textarea>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <input class="btn btn-primary" type="submit" value="Pubblica"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include("partials/footer.ejs") %>
